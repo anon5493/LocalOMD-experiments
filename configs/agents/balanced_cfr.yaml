@@ -1,0 +1,7 @@
+agent_class: 'agents.balanced_cfr.BalancedCFR'
+
+init_kwargs:
+  lr_constant: 1.0
+  ix_constant: 0.0
+
+  name: 'BalancedCFR'

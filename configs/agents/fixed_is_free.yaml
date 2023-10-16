@@ -1,0 +1,8 @@
+agent_class: 'agents.balanced_is_free.BalancedISFree'
+
+init_kwargs:
+  lr_constant: 1.0
+  ix_constant: 0.0
+  adaptation: False
+
+  name: 'LocalOMD Optimal'

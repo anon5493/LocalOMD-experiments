@@ -1,0 +1,32 @@
+description: local-omd_vs_baselines
+
+game_names: 
+  - kuhn_poker
+  - leduc_poker
+  - liars_dice
+
+n_simulations: 4
+save_path:  ./results/
+
+
+global_init_kwargs:
+  budget: 10_000_000
+  
+tuning_parameters:
+  tune_parameters: True
+  size_grid_search: 20
+  lowest_multiplier: 0.0001
+  highest_multiplier: 1_000
+
+
+global_training_kwargs:
+  number_points: 50
+  first_point: 1_000
+  record_exploitabilities: True
+  verbose: 0
+
+agents: 
+  - ./configs/agents/balanced_cfr.yaml
+  - ./configs/agents/balanced_ftrl.yaml
+  - ./configs/agents/fixed_is_free.yaml
+  - ./configs/agents/adaptive_is_free.yaml
